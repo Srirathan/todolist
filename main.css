@@ -1,0 +1,164 @@
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #76c7ff, #d1c4e9); /* Light blue to light purple gradient */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.5rem;
+    color: #4a4a4a;
+    letter-spacing: 1px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column; /* Stack input elements vertically */
+    gap: 10px; /* Space between inputs */
+}
+
+#taskInput, #taskPriority, #taskDueDate {
+    width: 100%; /* Full width */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in width/height */
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Full width for mobile */
+}
+
+/* Task list styles */
+#taskList li {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on mobile */
+    align-items: flex-start; /* Align items to the start */
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#taskList li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+span {
+    font-size: 1.1rem;
+}
+
+/* Button container for task actions */
+.button-container {
+    display: flex;
+    gap: 10px; /* Space between the buttons */
+}
+
+button.complete-btn {
+    background-color: #4caf50; /* Green for "Complete" */
+    color: white;
+    width: 48%; /* Slightly smaller than half to fit two buttons */
+}
+
+button.complete-btn:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2);
+}
+
+button.delete-btn {
+    background-color: #f44336; /* Red for "Delete" */
+    color: white;
+    width: 48%; /* Slightly smaller than half to fit two buttons */
+}
+
+button.delete-btn:hover {
+    background-color: #e53935;
+    box-shadow: 0 4px 8px rgba(244, 67, 54, 0.2);
+}
+
+/* Task Status styling */
+#taskStatus {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+#statusCircle {
+    margin: 20px auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f44336;
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+}
+
+/* Add Task Button */
+#addTaskButton {
+    background-color: #007bff; /* Blue for the "Add Task" button */
+    color: white;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#addTaskButton:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Priority and Due Date Styling */
+strong {
+    font-weight: bold;
+    color: #007bff;
+}
+
+#taskPriority, #taskDueDate {
+    background-color: #f1f1f1;
+}
+
+/* Custom input styles for a modern look */
+input, select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem; /* Smaller font size for mobile */
+    }
+    
+    button {
+        padding: 8px 16px; /* Smaller padding */
+        font-size: 14px; /* Smaller font size */
+    }
+    
+    #taskInput, #taskPriority, #taskDueDate {
+        padding: 8px; /* Smaller padding for inputs */
+    }
+    
+    #taskList li {
+        padding: 10px; /* Smaller padding for task items */
+    }
+}
